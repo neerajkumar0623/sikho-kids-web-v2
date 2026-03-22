@@ -12,22 +12,3 @@
     Access-Control-Allow-Origin = "*"
     Access-Control-Allow-Methods = "GET, OPTIONS"
     Access-Control-Allow-Headers = "*"
-```
-
----
-
-### 2. `_headers` file bhi add karo (most reliable for Netlify)
-
-`netlify.toml` ke saath **`_headers` file** bhi `public/` folder mein banao — yeh Netlify CDN pe seedha apply hoti hai:
-```
-# public/_headers
-
-/assets/images/*
-  Access-Control-Allow-Origin: *
-  Access-Control-Allow-Methods: GET, OPTIONS
-  Access-Control-Allow-Headers: *
-
-/assets/*
-  Access-Control-Allow-Origin: *
-  Access-Control-Allow-Methods: GET, OPTIONS
-  Access-Control-Allow-Headers: *
